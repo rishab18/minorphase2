@@ -1,0 +1,24 @@
+.cb-auth-container {
+    margin-top: 20px;
+}
+.cb-auth-container .card-panel {
+    padding: 50px;
+width: 500px;
+}
+
+.edit-panel {
+border-radius: 20px;
+box-shadow: 10px 10px 20px black;
+background:url(../images/light-blue-abstract.jpg) no-repeat 0px 0px ;
+}
+
+.banner-search{
+
+}
+
+.post-signup {
+text-align: center;
+}
+
+
+

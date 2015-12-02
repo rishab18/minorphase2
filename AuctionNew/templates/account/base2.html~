@@ -1,0 +1,93 @@
+<html lang="en">
+    {% load staticfiles %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+        <title> {% block title %} Auction King {% endblock %} </title>
+        {% include 'material/includes/material_css.html' %}
+        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'base/css/base2.css' %}">
+	<script src="{% static 'base/js/AjaxFormHelper.js' %}"></script>
+        {% block extrahead %}{% endblock %}
+    </head>
+	<body>
+     	<header>
+            <div class="navbar-fixed nav-top">
+                    <div class="container nav-wrapper">
+                        {% if user.is_authenticated %}
+                       
+  <div class="nav-wrapper nav-inside">
+    <ul class="right hide-on-med-and-down">
+      <!-- Dropdown Trigger -->
+      <li><i class="fa fa-user"></i><a id="user-name" class="dropdown-button h-btn" href="#!" data-activates="dropdown-own" class="btn waves-effect waves-light left">Hi, {{user.username}}</a>
+ <ul id="dropdown-own" class="dropping">
+  <li><div class="dropdown-value"><a href="{% url 'profile' %}">profile</a><div></li>
+    <li><div class="dropdown-value"><a href="{% url 'logout' %}">Logout</a><div></li>
+  <li><div class="dropdown-value"><a href="#!">Orders</a><div></li>
+</ul>
+</li>
+    </ul>
+  </div>
+{% else %}
+ <div class="nav-wrapper nav-inside">
+ <ul class="hide-on-med-and-down">
+<li><a class="right dropdown-button h-btn" href="{% url 'home' %}" class="btn waves-effect waves-light left">Home</a></li>
+</ul>
+</div>
+			{% endif %}
+                    </div>
+            </div>
+
+            <div class="navbar-fixed logged-nav">
+                <nav class="head">
+                    <div class="container nav-wrapper">
+			 <a href="#" class="brand-logo"><i>AUCTION KINGS</i>
+                        </a>
+<div class="search-bar">
+ {% block extranav %}{% endblock %}
+</div>
+                        {% if user.is_authenticated %}
+                        {% include "account/nav/nav.html" %}
+			{% endif %}
+                    </div>
+                </nav>
+            </div>
+            
+        </header>
+	<main>
+{% block section %}
+{% endblock %}
+            <div class="container">
+
+                            
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+<div class="redfooter">
+ <footer class="pagefooter">
+            <div class="footer-copyright">
+                <div class="container">
+                    <span>
+                        &copy; {% now 'Y' %} Auction King
+                    </span>
+                    <span class="cb-footer-icons"> 
+                        <a class="grey-text text-lighten-4" href="mailto:gargrishab18@yahoo.in"><i class="fa fa-envelope-square"></i></a>
+                        <a class="grey-text text-lighten-4" href="https://plus.google.com/+auctionking"><i class="fa fa-google-plus-square"></i></a>
+                        <a class="grey-text text-lighten-4" href="http://www.facebook.com/auctionsking"><i class="fa fa-facebook-square"></i></a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+</div>
+{% include 'material/includes/material_js.html' %}
+	<script>
+	$(document).ready(function() {
+		$('.modal-trigger').leanModal();
+	});
+	</script>
+	{% block scripts %}
+	{% endblock %}
+   </body>
+</html>

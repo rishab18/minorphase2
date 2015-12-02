@@ -1,0 +1,125 @@
+{% extends "account/base.html" %}
+{% block title %} Home| Products {% endblock %}
+{% load material_form %}
+{% load staticfiles %}
+
+{% block extrahead %} 
+<link rel="stylesheet" href="{% static 'product/css/product_view.css' %}">
+{% endblock %}
+
+{% block content %}
+<center>
+<h1 class="header1" data-id="{{item.id}}">{{item.Title}}</h1>
+</center>
+<div class="white1">
+<div class="flexbox">
+<div class="width1">
+<img height="200px" class="bid-topic" width="200px" src = "{{item.Photos.url}}">
+<h4 class="header4"> Category:</h4>
+<h5 class="header5">{{item.Category}} </h5>
+<h4 class="header4">BidStart: </h4>
+<h5 class="header5">{{item.BidStart}} </h5>
+<h4 class="header4">BidTill:</h4>
+<h5 class="header5">{{item.Till}}</h5>
+</div>
+<div class="width1">
+<h4 class="header4">Description</h4>
+<h6 class="header5">{{item.Description}}</h6>
+<h4 class="header4">Product By:</h4>
+<h5 class="header5">{{item.By}}</h4>
+<a href = "#addbid" data-id="{{item.id}}" class="bid-now-button modal-trigger"><h4 class="center-align">Bid Now!</h5> </a>
+</div>
+<div class="width1">
+<h4 class="header4">BidTill</h4>
+<h5 class="header5">{{item.Till}}</h5>
+<div id="myAnchor" date="{{item.Till}}" time="{{item.Timer}}">
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{% static 'countdown.js' %}" type="text/javascript"></script>
+<script
+<script type="application/javascript">
+var date = document.getElementById("myAnchor").getAttribute("date");
+var productid = $('.header1').attr('data-id');
+console.log(date);
+var datepart = date.split(" ");
+console.log(datepart);
+var month = datepart[0];
+console.log(month);
+var num;
+switch(month)
+{
+case "Jan.":
+num=1;
+break;
+case "Feb.":
+num=2;
+break;
+case "Mar.":
+num=3;
+break;
+case "Apr.":
+num=4;
+break;
+case "May.":
+num=5;
+break;
+case "Jun.":
+num=6;
+break;
+case "Jul.":
+num=7;
+break;
+case "Aug.":
+num=8;
+break;
+case "Sep.":
+num=9;
+break;
+case "Oct.":
+num=10;
+break;
+case "Nov.":
+num=11;
+break;
+case "Dec.":
+num=12;
+break;
+}
+console.log("month"+ num);
+var date = datepart[1];
+console.log(date);
+date = date.replace(/\,/g,"");
+console.log(date);
+var year = datepart[2];
+console.log(year);
+var myCountdownTest = new Countdown({
+								 	year	: year,
+									month	: num, 
+									day	: date,
+									width	: 300, 
+									height	: 50,
+									onComplete: function(){
+	$.ajax ({
+		dataType: 'json',
+            method: 'GET',
+            url:'/products/product/time_over/' + productid +"/",
+		success: function(data) {
+	console.log(data);
+	alert(data.);
+	}
+	});
+},
+									});
+
+
+
+</script>
+</div>
+<a href = "{% url 'bid_show' id=item.id %}" data-id="{{item.id}}"><h4 class="center-align">View Bids!</h5> </a>
+<a href = "" class="fnuf follow" data-id="{{item.id}}"><h5 class="center-align">Follow!</h5>
+
+<h4 class="header4">time</h4>
+<h5 class="header5">{{item.Timer}}</h5>
+</div>
+</div>
+</div>
+{% endblock %}

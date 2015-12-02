@@ -1,0 +1,297 @@
+
+<!DOCTYPE HTML>
+<html>
+{% load staticfiles %}
+<head>
+<title>Auction King</title>
+<meta charset="utf-8">
+<link href="{% static 'index/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'index/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'index/css/owl.carousel.css' %}" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Inward Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+
+<script src="{% static 'index/js/jquery-1.11.1.min.js' %}"></script>
+
+
+
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+
+<script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+</script>
+</head>
+<body>
+		<!--header-->
+			<div class="header">
+				<div class="header-top">
+				<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<!--Brand and toggle get grouped for better mobile display-->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+					</div>
+        <!--Collect the nav links, forms, and other content for toggling-->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+        <li><a href="#" >About</a></li>
+		<li><a href="#project">Trending</a></li>
+	<!--	<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="gallery.html">Category 1</a></li>
+				<li><a href="gallery.html">Category 2</a></li>
+				<li><a href="gallery.html">Category 3</a></li>  
+			</ul>
+		</li> -->
+		<li><a href="#news">Latest Bids</a></li>
+		<li><a href="#service">Services</a></li> 
+		<li><a href="#indicate">Contact</a></li>
+        </ul>
+    </div><!--navbar collapse-->
+  </div><!--container fluid-->
+</nav>
+	<div class="social-icons">
+		<a href="#"><i class="icon1"></i></a>
+		<a href="#"><i class="icon2"></i></a>
+		<a href="#"><i class="icon3"></i></a>
+		<a href="#"><i class="icon4"></i></a>
+	</div>
+	<div class="clearfix"></div>
+</div>
+			<div class="banner-center">
+				<div class="container">
+					<div class="logo">
+					
+						<h1 style="margin-top:180px;"><a href="index.html">AUCTION KING</a></h1>
+					</div>
+					
+					
+					<div class="button">
+						<a href="services.html" class="button1 hvr-rectangle-in">LOGIN</a>
+						<a href="mail.html" class="button2 hvr-rectangle-in">REGISTER</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--header-->
+		<script src="index/js/bootstrap.js"></script>
+		<!--services-->
+		<div class="content">
+			
+				<!--services-->
+					<!--projects-->
+					<div class="project" id="project">
+						<div class="container">
+							<h3>Trending Now</h3>
+						</div>
+					<div class="gallery-cursual">
+						<!--requried jsfiles for owl-->
+					<script src="js/owl.carousel.js"></script>
+							<script>
+								$(document).ready(function() {
+									$("#owl-demo").owlCarousel({
+										items : 4,
+										lazyLoad : true,
+										autoPlay : true,
+										pagination : false,
+									});
+								});
+							</script>
+				<!--//requried-jsfiles-for owl-->
+				<!--start content_slider-->
+				<div id="owl-demo" class="owl-carousel text-center">
+					<div class="item">
+						<img class="lazyOwl" data-src="images/laptop2.jpg" "img-responsive" style="height:250px" alt="name">
+					</div>
+					<div class="item">
+						<img class="lazyOwl" data-src="images/bedsheet.jpg" class="img-responsive" style="height:250px" alt="name">
+					</div>
+					<div class="item">
+						<img class="lazyOwl" data-src="images/tablet.png" style="height:250px" class="img-responsive" alt="name">
+					</div>
+					<div class="item">
+						<img class="lazyOwl" data-src="images/shoes.jpg" style="height:250px" class="img-responsive" alt="name">
+					</div>
+					<div class="item">
+						<img class="lazyOwl" data-src="images/iphone.jpg" style="height:250px" class="img-responsive" alt="name">
+					</div>
+					<div class="item">
+						<img class="lazyOwl" data-src="images/bracelet.jpg" style="height:250px" class="img-responsive" alt="name">
+					</div>
+					
+				</div>
+		<!--sreengallerycursual-->
+			</div>
+		</div>
+	
+			<div class="news" id="news">
+				<div class="container">
+					<h3>Latest Auctions</h3>
+						<div class="news-grids">
+							<div class="col-md-4 news-grid">
+									<h5>BID NOW</h5>
+									<a href="#" class="mask">
+									<img src="images/speakers.jpg" class="img-responsive zoom-img" alt=""></a>	
+									<h4><a href="#">Product 1</a></h4><br><br>
+									
+								</div>
+							<div class="col-md-4 news-grid">
+									<h5>BID NOW</h5>
+									<a href="#" class="mask">
+									<img src="images/bag.jpg" class="img-responsive zoom-img" alt=""></a>	
+									<h4><a href="#">Product 2</a></h4><br><br>
+								
+								</div>
+							<div class="col-md-4 news-grid">
+								<h5>BID NOW</h5>
+									<a href="#" class="mask">
+									<img src="images/paint.jpg" class="img-responsive zoom-img" alt=""></a>
+									<h4><a href="#">Product 3</a></h4><br><br>
+									
+								</div>
+							<div class="col-md-4 news-grid">
+								<h5>BID NOW</h5>
+									<a href="#" class="mask">
+									<img src="images/bag.jpg" class="img-responsive zoom-img" alt=""></a>	
+									<h4><a href="#">Product 4</a></h4><br><br>
+									
+								</div>
+						
+								<div class="col-md-4 news-grid">
+									<h5>BID NOW</h5>
+									<a href="#" class="mask">
+									<img src="images/jewel.jpg" class="img-responsive zoom-img" alt=""></a>	
+									<h4><a href="#">Product 5</a></h4>
+									
+								</div>
+							<div class="col-md-4 news-grid">
+									<h5>BID NOW</h5>
+									<a href="#" class="mask">
+									<img src="images/shoes2.jpg" class="img-responsive zoom-img" alt=""></a>	
+									<h4><a href="#">Product 6</a></h4>
+								
+								</div>
+							<div class="col-md-4 news-grid">
+								<h5>BID NOW</h5>
+									<a href="#" class="mask">
+									<img src="images/sofa.jpg" class="img-responsive zoom-img" alt=""></a>
+									<h4><a href="#">Product 7</a></h4>
+									
+								</div>
+							<div class="col-md-4 news-grid">
+								<h5>BID NOW</h5>
+									<a href="#" class="mask">
+									<img src="images/laptop.jpg" class="img-responsive zoom-img" alt=""></a>	
+									<h4><a href="#">Product 8</a></h4>
+									
+								</div>
+							<div class="clearfix"></div>
+						</div>
+				</div>
+			</div>
+		</div>
+			<!--new-->
+				<!--indicate-->
+				<div class="service" id="service">
+				<div class="container">
+					<h2>Our services</h2>
+					<div class="service-grids">
+						<div class="col-md-3 service-grid">
+						<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Auction</h4>
+						<p>Contest your product for auction and expect best returns for it ! </p>
+						</div>
+						<div class="col-md-3 service-grid">
+						<h4><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>Bid</h4>
+						<p>Bid now for you favourite product and own it . </p>
+						</div>
+						<div class="col-md-3 service-grid">
+						<h4><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Search</h4>
+						<p> Search for the product of your wish using our filters . </p>
+						</div>
+						<div class="col-md-3 service-grid">
+						<h4><span class="glyphicon glyphicon-link" aria-hidden="true"></span>Follow</h4>
+						<p> Follow the bid of  product of your interest everytime a new bid is placed. </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+				<div class="indicate" id="indicate">
+					<div class="container">
+						<div class="indicate-grids">
+							<div class="col-md-3 indicate-grid">
+								<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+								<p>New Delhi India </p>
+							</div>
+							<div class="col-md-3 indicate-grid">
+								<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+								<p>Telephone : 100-101-1034 </p>
+							</div>
+							<div class="col-md-3 indicate-grid">
+								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+								<p>E-mail : <a href="mailto:example@mail.com"> thedrp@gmail.com</a></p>
+							</div>
+							<div class="col-md-3 indicate-grid">
+								<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+								<p>FAX :  +1 800 889 9898</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			<!--indicate-->
+			<!--footer-->
+		<div class="footer-section">
+						<div class="container">
+							<div class="footer-top">
+						<p>Copyright &copy; 2015 Auction King . All rights reserved | Design by <a href="#">DRP</a></p>
+									</div>
+							<script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+				</div>
+			</div>
+</body>
+</html>

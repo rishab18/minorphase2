@@ -1,0 +1,38 @@
+#portfolio {
+    text-align: center;
+    background: #f7f7f7;
+    padding: 50px;
+}
+.port1 {
+    font: 700 40px "Montserrat",sans-serif;
+    color: black;
+    margin-bottom: 10px;
+}
+.portimages {
+    display: flex;
+    flex-wrap: wrap;
+    width: 83%;
+    margin: auto;
+    margin-top: 5%;
+    justify-content: space-between;
+    align-items: center;
+    border-color: black;
+    border-style: solid;
+    }
+.pm {
+    width: 290px;
+    height: 290px;
+}
+.portimagetext {
+    background-color: white;
+    display: inline-block;
+}
+.d2 {
+    margin-top: 4%;
+}
+.textin {
+    margin-bottom: 20px;
+}
+.textin1 {
+    margin-bottom: 0%;
+}

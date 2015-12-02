@@ -1,0 +1,33 @@
+.flexbox{
+ margin-top:10px;
+ display:flex;
+ justify-content:space-around;
+}
+.white1{
+ width:906px;
+ height:650px;
+ background-image:url('white.jpg');
+border-radius: 10px;
+padding-right: 50px;
+}
+
+.extra-panel {
+padding-right: 300px;
+}
+
+.header4{
+  color:#039BE5;
+} 
+
+.header5{
+ color:grey;
+}
+.header1{
+ color:brown;
+}
+
+.width1{
+  width:302px;
+  text-align:center;
+  margin-top:20px;
+}

@@ -1,0 +1,36 @@
+{% extends "account/base.html" %}
+{% load material_form %}
+{% block title %} Auction King {% endblock %}
+{% load staticfiles %}
+
+{% block extrahead %} 
+<link rel="stylesheet" href="{% static 'product/css/jquery-ui.min.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<form method="GET" action="{% url 'search_product' %}">
+{% form form=form %} {% endform %}
+</form>
+
+ <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+
+{% endblock %} 
+
+{% block scripts %}
+<script src="{% static 'product/js/search-autocomplete.js' %}"> </script>
+<script src="{% static 'product/js/jquery-ui.min.js' %}"> </script>
+<script>
+ $(document).ready(function() { 
+        autocomplete.init();
+    });
+</script>
+{% endblock %}

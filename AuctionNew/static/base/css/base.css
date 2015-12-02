@@ -1,0 +1,206 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#home {
+    padding: 100px 0;   
+    width: 100%;
+    background-image: url("online2.jpg");
+   / display: flex;
+    background-size: auto;
+    /height: 700px;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+.header {
+    //display: inline-block;
+    vertical-align: middle;
+   // margin-top: 200px;
+}
+.header1{
+    font: italic 40px "Droid Serif",serif;
+    color: white;
+}
+.header2{
+    font: "Montserrat",sans-serif;
+    font-size:80px;
+    color: white;
+    margin: auto;
+}
+.header3{
+    font-family: 'Momtserrat',sans-serif;
+    font-size: 18px;
+    margin-top: 5%;
+    display: inline-block;
+    width: 30%;
+    /height: 10%;
+    border-color: yellow;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    line-height: 65px;
+    background-color: #fed136;
+}
+main {
+    margin-top: 00px;
+    flex: 1 0 auto;
+}
+
+#imggg {
+margin-top:10px;
+width:100px;
+height:70px;
+margin-left:200px;
+margin-bottom:25px;
+}
+
+
+
+#dropdown-own {
+  width: 108px;
+  position: absolute;
+  left: 750.390625px;
+  opacity: 1;
+  display: hidden;
+}
+
+.search-bar {
+position: absolute;
+left: 38%;
+top: 20%;
+}
+
+.dropping {
+  background-color: #FFFFFF;
+  margin: 0;
+  display: none;
+  min-width: 100px;
+  max-height: 650px;
+  overflow-y: auto;
+  opacity: 0;
+  position: absolute;
+  z-index: 999;
+top: 30px;
+border-radius: 5px;
+}
+
+.dropping li > div a {
+font-size: 1.2rem;
+  color: #26a69a;
+  display: block;
+  padding: 1rem 1rem;
+}
+
+.dropdown-value:hover {
+  background: #f4f5f7;
+  border-color: #f1155a;
+}
+
+.h-btn {
+	color: #f1155a;
+	border-width: 3px;
+	border: red;
+	position: absolute;
+	top:5px;
+	left: 70%;
+	font: italic 20px "Droid Serif",serif;
+}
+.h-btn:hover, .h-btn.hover {
+  color: #FFF;
+  border-color: #f1155a;
+}
+
+.display {
+	font: italic 50px "Droid Serif",serif;
+	margin-top: 20px;
+}
+
+.navi {
+top: 45px;;
+} 
+
+.brand-logo img {
+    height: 54px;
+    width: auto;
+    margin-top: 5px;
+    margin-left:25px;
+    font: 700 40px "Montserrat",sans-serif;
+}
+
+.logged-nav {
+position: static;
+}
+
+.nav-top {
+height: 30px;
+position: fixed;
+width: 100%;
+background-color: black;
+border-color: pink;
+border-width: 10px;
+}
+
+.nav-inside {
+height: 30px;
+width: 100%;
+}
+
+#contact {
+    padding: 5%;
+    background-image: url(contact-us-bg.jpg);
+/    background-repeat: no-repeat;
+    background-size: auto;
+    text-align: center;
+}
+.contacthead1 {
+    color: white;
+}
+.service1 {
+    //padding-top: 10px;
+    font: 700 40px "Montserrat",sans-serif;
+    color: white;
+    margin-bottom: 10px;
+}
+.head {
+	background-color: #07657D;
+	top: 30px;
+}
+
+.name-head {
+	background-color: black;
+	height: 50px;
+}
+
+.redfooter{
+	background-color: #07657D;
+	margin-top: 20px;
+}
+
+footer.pagefooter{
+    margin-top: 20px;
+    color:rgba(255,255,255,0.8);
+}
+
+footer.pagefooter .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer.pagefooter .footer-copyright{
+    font-size: 28px;
+}
+
+
+form small.error {
+    font-size: 100%;
+}
+
+form .errors small.error {
+    font-size: 75%;
+}
+
+form a.cb-form.right {
+   // line-height: 36px;
+}

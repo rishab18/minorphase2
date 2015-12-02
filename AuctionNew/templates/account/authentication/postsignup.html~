@@ -1,0 +1,11 @@
+{% extends "account/authentication/auth_base.html" %}
+{% load material_form %}
+{% block title %} AK | Confirmation {% endblock %}
+{% block auth_content %}
+<div class='post-signup>
+<p> Thanks for registering with us.<p>
+<br>
+<p> A email has been sent to you with the activation link.<p>
+<div>
+{% endblock %}
+

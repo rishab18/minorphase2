@@ -1,0 +1,38 @@
+{% extends "account/base2.html" %}
+{% block title %} Home| Products {% endblock %}
+{% load material_form %}
+{% load staticfiles %}
+
+
+{% block extrahead %} 
+<link rel="stylesheet" href="{% static 'product/css/product_upload.css' %}">
+<link rel="stylesheet" href="{% static 'product/css/golde_css.css' %}">
+{% endblock %}
+
+{% block section %}
+<section id="home">
+            <div class ="header">
+                <p class="header1">Welcome to Auction King</p>
+                <p class="header2">IT'S NICE TO MEET YOU</p>
+            </div>
+</section>
+    <section id="contact">
+        <div><h2 class="service1 contacthead1">CATEGORIES</h2></div>
+</section>
+<div id="portfolio">
+
+            <div class="portimages">
+                <div class="portimagetext"><img src="{% static 'product/images/electronics.jpg' %}"  class="pm" ><div><h5 class="textin1">Electronics</h5><p class="service2 textin"></p></div></div>
+		 <div class="portimagetext"><img src="{% static 'product/images/jewellery.jpg' %}" class="pm" ><div><h5 class="textin1">Jewelery</h5><p class="service2 textin"></p></div></div>
+		 <div class="portimagetext"><img src="{% static 'product/images/antique.jpg' %}" class="pm" ><div><h5 class="textin1">Antique items</h5><p class="service2 textin"></p></div></div> 
+		<div class="portimagetext"><img src="{% static 'product/images/painting.jpg' %}" class="pm" ><div><h5 class="textin1">Paintings</h5><p class="service2 textin"></p></div></div> 
+		<div class="portimagetext"><img src="{% static 'product/images/random.jpg' %}" class="pm" ><div><h5 class="textin1">Random Stuff</h5><p class="service2 textin"></p></div></div> 
+		<div class="portimagetext"><img src="{% static 'product/images/homer.jpg' %}" class="pm" ><div><h5 class="textin1">Home Appliances</h5><p class="service2 textin"></p></div></div> 
+		<div class="portimagetext"><img src="{% static 'product/images/book.jpg' %}" class="pm" ><div><h5 class="textin1">Books</h5><p class="service2 textin"></p></div></div> 
+		<div class="portimagetext"><img src="{% static 'product/images/shoesy.jpg' %}" class="pm" ><div><h5 class="textin1">Footware</h5><p class="service2 textin"></p></div></div> 
+		
+            </div>
+</div>
+
+{% endblock %}
+

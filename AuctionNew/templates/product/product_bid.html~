@@ -1,0 +1,15 @@
+{% extends "account/base.html" %}
+{% block title %} Home| Products {% endblock %}
+{% load material_form %}
+{% load staticfiles %}
+
+{% block content %}
+
+<h1 align="center">{{name}}</h1>
+
+{% for bid in bids %}
+<h2>{{bid.BidPrice}}</h2>
+<h2>{{bid.By}}</h2>
+{% endfor %}
+
+{% endblock %}

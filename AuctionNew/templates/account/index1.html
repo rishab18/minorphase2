@@ -1,0 +1,18 @@
+{% extends "account/base.html" %}
+{% load material_form %}
+{% block title %} Auction King {% endblock %}
+
+{% block extrahead %} 
+<link rel="stylesheet" href="{% static 'product/css/jquery-ui.min.css' %}">
+{% endblock %}
+
+{% block content %}
+<form method="GET" action="{ url 'search_product' }" >
+{% form form = form %} {% endform %}
+</form>
+{% end block %}
+
+{% block script %}
+<script src="{% static 'product/js/search-autocomplete.js' %}"> </script>
+<script src="{% static 'product/js/jquery-ui.min.js %}"> </script>
+{% endblock %}

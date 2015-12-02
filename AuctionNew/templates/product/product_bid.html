@@ -1,0 +1,44 @@
+{% extends "account/base.html" %}
+{% block title %} Home| Products {% endblock %}
+{% load material_form %}
+{% load staticfiles %}
+
+{% block extrahead %} 
+<link rel="stylesheet" href="{% static 'product/css/product_view.css' %}">
+{% endblock %}
+
+{% block content %}
+<center>
+<h1 class="header1">{{name}}</h1>
+</center>
+
+<div class="white1">
+<div class="flexbox">
+<div class="width1">
+<img class= "header2" height="200px" class="bid-topic" width="200px" src = "{{item.Photos.url}}">
+<h4 class="header4">BidTill:</h4>
+<h5 class="header5">{{item.Till}}</h5>
+</div>
+<div class="width1">
+<h4 class="header4">BidBy</h4>
+{% for bid in bids %}
+<h5 class="header5 header2">{{bid.By}}</h5>
+{% endfor %}
+</div>
+
+<div class="width1">
+<h4 class="header4">BidPrice</h4>
+{% for bid in bids %}
+<h5 class="header5 header2">{{bid.BidPrice}}</h5>
+{% endfor %}
+</div>
+
+<div class="width1">
+<h4 class="header4">BidTill</h4>
+<h5 class="header5">{{item.Till}}</h5>
+<a href = "#addbid" data-id="{{Product.id}}" class="bid-now-button modal-trigger"><h5 class="center-align header2">Bid Now!</h5>
+</div>
+</div>
+</div>
+
+{% endblock %}
